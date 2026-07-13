@@ -1,7 +1,7 @@
 package hei.school.examen.entity;
 
+import java.time.Instant;
 import java.util.UUID;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -16,7 +16,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class ImageMetadata {
-    private UUID id;
-    private String nomFichier;
-    private String email;
+  private UUID id;
+  private String nomFichier;
+  private String email;
+  private Instant createdAt;
 }
