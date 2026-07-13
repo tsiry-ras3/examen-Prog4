@@ -1,8 +1,8 @@
 package hei.school.examen.domain.mapper;
 
-import hei.school.examen.domain.model.ImageMetadata;
 import hei.school.examen.endpoint.rest.dto.SubmissionListItemDTO;
 import hei.school.examen.endpoint.rest.dto.SubmissionResponseDTO;
+import hei.school.examen.entity.ImageMetadata;
 import java.util.List;
 import org.springframework.stereotype.Component;
 
@@ -10,8 +10,7 @@ import org.springframework.stereotype.Component;
 public class SubmissionMapper {
 
   public SubmissionResponseDTO toResponseDTO(ImageMetadata metadata) {
-    return new SubmissionResponseDTO(
-        metadata.getId(), metadata.getFileName(), metadata.getEmail());
+    return new SubmissionResponseDTO(metadata.getId(), metadata.getFileName(), metadata.getEmail());
   }
 
   public SubmissionListItemDTO toListItemDTO(ImageMetadata metadata) {
