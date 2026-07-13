@@ -1,21 +1,15 @@
-package hei.school.examen.entity;
+package hei.school.examen.endpoint.rest.dto;
 
 import java.time.Instant;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
-@Getter
-@Setter
-@Builder
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
-@ToString
-public class ImageMetadata {
+@AllArgsConstructor
+public class SubmissionListItemDTO {
   private UUID id;
   private String fileName;
   private String email;

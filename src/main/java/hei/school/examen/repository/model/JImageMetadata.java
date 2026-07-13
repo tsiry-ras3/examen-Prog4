@@ -1,5 +1,6 @@
 package hei.school.examen.repository.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -21,8 +22,18 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class JImageMetadata {
+
   @Id private UUID id;
-  private String nomFichier;
+
+  @Column(name = "file_name", nullable = false)
+  private String fileName;
+
+  @Column(nullable = false)
   private String email;
+
+  @Column(name = "s3_url_bw")
+  private String s3UrlBw;
+
+  @Column(name = "created_at", nullable = false)
   private Instant createdAt;
 }
